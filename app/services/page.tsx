@@ -117,30 +117,12 @@ export default function ServicesPage() {
                         </article>
                     ))}
                 </div>
-
-                {/* Divider */}
-                <div className="mx-auto max-w-6xl px-4 sm:px-8 h-px bg-linear-to-r from-transparent via-border to-transparent mt-20" />
-
-                {/* CTA */}
-                <div className="mt-30 mb-10 flex flex-col items-center gap-6 text-center">
-                    <h2 className="text-2xl font-semibold">Projekt besprechen?</h2>
-                    <p className="max-w-lg text-muted-foreground">
-                        Kurze Anfrage reicht. Ich melde mich mit einem Vorschlag für die nächsten Schritte.
-                    </p>
-                    <Button asChild size="lg" className="rounded-xl">
-                        <Link href="/contact">
-                            Kontakt aufnehmen
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                        </Link>
-                    </Button>
-                </div>
             </div>
 
+            <div className="mx-auto max-w-6xl px-4 sm:px-8 h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
             <section id="process" className="relative">
-                <div className="mx-auto max-w-6xl px-4 sm:px-8 h-px bg-linear-to-r from-transparent via-border to-transparent" />
-
-                <div className="mx-auto w-full max-w-screen-2xl px-0 py-20">
+                <div className="mx-auto w-full max-w-screen-2xl px-0 py-20 mt-10">
                     <div className="mx-auto max-w-3xl text-center">
                         <h2 className="text-3xl font-semibold">So läuft&apos;s ab</h2>
                         <p className="mt-2 text-muted-foreground">Ein klarer Ablauf: transparent, planbar und zuverlässig — so führe ich Projekte von der Idee zum Livegang.</p>
@@ -181,6 +163,23 @@ export default function ServicesPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Divider */}
+            <div className="mx-auto max-w-6xl px-4 sm:px-8 h-px bg-linear-to-r from-transparent via-border to-transparent mt-20" />
+
+            {/* CTA */}
+            <div className="mt-30 mb-30 flex flex-col items-center gap-6 text-center">
+                <h2 className="text-2xl font-semibold">Projekt besprechen?</h2>
+                <p className="max-w-lg text-muted-foreground">
+                    Kurze Anfrage reicht. Ich melde mich mit einem Vorschlag für die nächsten Schritte.
+                </p>
+                <Button asChild size="lg" className="rounded-xl">
+                    <Link href="/contact">
+                        Kontakt aufnehmen
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                </Button>
+            </div>
         </main >
     );
 }

@@ -28,17 +28,17 @@ export default function Hero({ imageSrc }: { imageSrc?: string | StaticImageData
     }
 
     return (
-        <section className="relative min-h-[90vh] flex items-center">
+        <section className="relative min-h-screen flex items-center">
             {/* Subtle background gradient */}
             <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
             >
-                <div className="absolute -right-1/4 -top-1/4 h-150 w-150 rounded-full bg-primary/3 blur-3xl" />
-                <div className="absolute -left-1/4 bottom-0 h-125 w-125 rounded-full bg-accent/3 blur-3xl" />
+                <div className="absolute -right-1/4 -top-1/4 h-40 w-40 sm:h-80 sm:w-80 lg:h-96 lg:w-96 rounded-full bg-primary/3 blur-3xl" />
+                <div className="absolute -left-1/4 bottom-0 h-32 w-32 sm:h-72 sm:w-72 lg:h-80 lg:w-80 rounded-full bg-accent/3 blur-3xl" />
             </div>
 
-            <div className="mx-auto w-full max-w-screen-2xl px-0 py-55">
+            <div className="mx-auto w-full max-w-screen-2xl px-0 py-12 sm:py-16 lg:py-24 mb-20">
                 <div className="grid gap-20 lg:grid-cols-2 lg:items-center">
                     {/* Text Column */}
                     <div className="space-y-5">
@@ -73,7 +73,7 @@ export default function Hero({ imageSrc }: { imageSrc?: string | StaticImageData
                             ref={ref}
                             onMouseMove={handleMove}
                             onMouseLeave={handleLeave}
-                            className="relative w-full h-122.5 mx-auto overflow-visible border-0"
+                            className="relative w-full h-64 sm:h-80 lg:h-[490px] mx-auto overflow-visible border-0"
                             style={{ perspective: 1000 }}
                         >
                             <div
