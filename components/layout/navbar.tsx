@@ -17,9 +17,9 @@ import { useScroll } from "@/lib/use-scroll";
 
 const NAV = [
     { label: "Start", href: "/" },
-    { label: "Services", href: "/services" },
+    { label: "Leistungen", href: "/services" },
     { label: "Projekte", href: "/projects" },
-    { label: "Kontakt", href: "/contact" },
+    { label: "Über Mich", href: "/about" },
 ];
 
 export default function Navbar() {
@@ -45,7 +45,7 @@ export default function Navbar() {
                 <Logo />
 
                 {/* Desktop Nav */}
-                <nav className="hidden items-center gap-0.5 md:flex">
+                <nav className="hidden items-center gap-1 md:flex">
                     {NAV.map((item) => {
                         const active =
                             item.href === "/"
@@ -72,7 +72,7 @@ export default function Navbar() {
                 {/* Right side */}
                 <div className="flex items-center gap-2">
                     <Button asChild className="hidden rounded-xl md:inline-flex">
-                        <Link href="/contact">Anfrage</Link>
+                        <Link href="/contact">Kontakt</Link>
                     </Button>
 
                     {/* Mobile Menu */}

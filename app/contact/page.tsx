@@ -1,89 +1,59 @@
 "use client";
 
-import Script from "next/script";
-import { Button } from "@/components/ui/button";
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 const NS = "contact";
 const LINK = "koetting/contact";
 
 export default function ContactPage() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: NS });
+      cal("ui", {
+        theme: "light",
+        cssVarsPerTheme: {
+          light: { "cal-brand": "#6081ff" },
+          dark: { "cal-brand": "#6081ff" },
+        },
+        hideEventTypeDetails: true,
+        layout: "month_view",
+      });
+    })();
+  }, []);
+
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12 sm:px-8 sm:py-16">
-      <header className="max-w-2xl">
-        <p className="text-sm font-medium text-muted-foreground">Kontakt</p>
+    <main className="relative w-full overflow-hidden">
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute -right-1/4 -top-1/4 h-150 w-150 rounded-full bg-primary/3 blur-3xl" />
+        <div className="absolute -left-1/4 bottom-0 h-125 w-125 rounded-full bg-accent/3 blur-3xl" />
+      </div>
 
-        <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-          Termin buchen
-        </h1>
+      <section className="mx-auto w-full max-w-screen-2xl px-0 py-32 lg:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Termin buchen</h1>
 
-        <p className="mt-3 text-muted-foreground">
-          Buche ein kurzes Erstgespräch. Wir klären Anforderungen, Zeitplan und den
-          sinnvollsten nächsten Schritt.
-        </p>
-
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Button
-            className="rounded-xl"
-            data-cal-link={LINK}
-            data-cal-namespace={NS}
-            data-cal-config={JSON.stringify({ layout: "month_view", theme: "light" })}
-          >
-            Termin auswählen
-          </Button>
-
-          <p className="text-sm text-muted-foreground">
-            Dauer: 20 Minuten · Remote · Unverbindlich
+          <p className="mt-3 text-muted-foreground">
+            Buche ein kurzes 20 Minütiges Erstgespräch. Wir klären Anforderungen, Zeitplan und den
+            sinnvollsten nächsten Schritt. Das Gespräch ist unverbindlich und kostenlos.
           </p>
         </div>
-      </header>
+      </section>
 
-      {/* Cal element-click embed bootstrap + UI config */}
-      <Script
-        id="cal-element-click"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function (C, A, L) {
-              let p = function (a, ar) { a.q.push(ar); };
-              let d = C.document;
-              C.Cal = C.Cal || function () {
-                let cal = C.Cal;
-                let ar = arguments;
-                if (!cal.loaded) {
-                  cal.ns = {};
-                  cal.q = cal.q || [];
-                  d.head.appendChild(d.createElement("script")).src = A;
-                  cal.loaded = true;
-                }
-                if (ar[0] === L) {
-                  const api = function () { p(api, arguments); };
-                  const namespace = ar[1];
-                  api.q = api.q || [];
-                  if (typeof namespace === "string") {
-                    cal.ns[namespace] = cal.ns[namespace] || api;
-                    p(cal.ns[namespace], ar);
-                    p(cal, ["initNamespace", namespace]);
-                  } else p(cal, ar);
-                  return;
-                }
-                p(cal, ar);
-              };
-            })(window, "https://app.cal.com/embed/embed.js", "init");
-
-            Cal("init", "${NS}", { origin: "https://app.cal.com" });
-
-            Cal.ns.${NS}("ui", {
-              theme: "light",
-              cssVarsPerTheme: {
-                light: { "cal-brand": "#6c63ff" },
-                dark: { "cal-brand": "#6c63ff" }
-              },
-              hideEventTypeDetails: false,
-              layout: "month_view"
-            });
-          `,
-        }}
-      />
+      <section className="mx-auto w-full max-w-screen-2xl px-0 pb-16">
+        <div className="mx-auto w-full max-w-screen-2xl">
+          <div className="rounded-3xl border bg-background px-4 py-12 shadow-[0_12px_40px_rgba(0,0,0,0.04)] sm:px-8 sm:py-16">
+            <div className="mt-8 h-150 w-full">
+              <Cal
+                namespace={NS}
+                calLink={LINK}
+                style={{ width: "100%", height: "100%", overflow: "hidden" }}
+                config={{ layout: "month_view", theme: "light" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

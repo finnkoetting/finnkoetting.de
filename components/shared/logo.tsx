@@ -3,19 +3,19 @@ import Link from "next/link";
 
 export default function Logo() {
     return (
-        <Link href="/" className="inline-flex items-center gap-2 font-semibold tracking-tight">
+        <Link href="/" className="inline-flex items-center gap-4 font-semibold tracking-tight">
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-background overflow-hidden">
                 <Image
                     src="/brand.svg"
+                    width={128}
+                    height={128}
                     alt="finnkoetting.de"
-                    width={24}
-                    height={24}
-                    className="h-6 w-6"
+                    className="h-15 w-15"
                     priority
                 />
             </span>
             <span className="text-sm sm:text-base">
-                finnkoetting<span className="text-muted-foreground">.de</span>
+                Finn Kötting
             </span>
         </Link>
     );
