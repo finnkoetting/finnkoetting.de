@@ -10,8 +10,10 @@ const LINKS = [
 ];
 
 const LEGAL = [
-    { label: "Impressum", href: "/imprint" },
-    { label: "Datenschutz", href: "/privacy" },
+    { label: "Impressum", href: "/legal/imprint" },
+    { label: "Datenschutz", href: "/legal/privacy" },
+    { label: "AGB", href: "/legal/terms" },
+    { label: "Widerrufsbelehrung", href: "/legal/withdrawal" },
 ];
 
 export default function Footer() {
