@@ -5,39 +5,6 @@ const SKILLS: string[] = [
     'HTML & CSS', 'Git', 'MySQL', 'MongoDB', 'Linux', 'REST APIs',
 ]
 
-const WORK: { title: string; description: string; period: string }[] = [
-    /*{
-        title: "FernUniversität in Hagen",
-        description: "Ausbildung zum Fachinformatiker für Anwendungsentwicklung mit Schwerpunkt auf Web- und Softwareentwicklung.",
-        period: "08/2023 — Aktuell",
-    },
-    {
-        title: "tecis Finanzdienstleistungen AG",
-        description: "Praktikum in der Finanzdienstleistung mit Fokus auf Kundenberatung und administrativen Aufgaben.",
-        period: "01/2026 — Aktuell",
-    },*/
-    {
-        title: "AVU Aktiengesellschaft für Versorgungs-Unternehmen",
-        description: "Praktikum als Fachinformatiker für Anwendungsentwicklung mit Fokus auf Webentwicklung und internen Tools.",
-        period: "01/2023 — 02/2023",
-    },
-    {
-        title: "Private Universität Witten/Herdecke gGmbH",
-        description: "Praktikum als Sekretariatsmitarbeiter mit Schwerpunkt auf Office-Management und administrativen Aufgaben.",
-        period: "03/2019",
-    },
-    {
-        title: "Uwe Rimbach",
-        description: "Praktikum als Sanitär- und Heizungsinstallateur mit Einblicken in Rechnungswesen und Kundenservice.",
-        period: "04/2018",
-    },
-    {
-        title: "dormakaba Deutschland GmbH",
-        description: "Praktikum als Anwendungstechniker mit Fokus auf Produktenwicklung und technischen Support.",
-        period: "04/2017",
-    }
-]
-
 export default function AboutPage() {
     return (
         <main className="relative w-full overflow-hidden">
@@ -143,24 +110,6 @@ export default function AboutPage() {
                             <span key={s} className="inline-block rounded-full bg-muted px-4 py-2 text-sm text-foreground/90">
                                 {s}
                             </span>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Praktika Section */}
-            <section className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 pb-24">
-                <div className="mx-auto w-full max-w-screen-2xl">
-                    <h2 className="text-xl font-semibold mb-6">Praktika</h2>
-
-                    <div className="space-y-6">
-                        {WORK.map((w) => (
-                            <div key={w.title} className="rounded-2xl card bg-card p-6">
-                                <h3 className="font-medium">{w.title} ({w.period})</h3>
-                                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                                    {w.description}
-                                </p>
-                            </div>
                         ))}
                     </div>
                 </div>
