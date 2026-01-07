@@ -68,26 +68,28 @@ export default function Hero({ imageSrc }: { imageSrc?: string | StaticImageData
                     </div>
 
                     {/* Image Column with 3D effect */}
-                    <div className="lg:order-last">
+                    <div className="lg:order-last hidden lg:block">
                         <div
                             ref={ref}
                             onMouseMove={handleMove}
                             onMouseLeave={handleLeave}
-                            className="relative w-full h-64 sm:h-80 lg:h-122.5 mx-auto overflow-visible border-0"
+                            className="relative w-full h-48 sm:h-64 md:h-80 lg:h-[520px] lg:max-w-[720px] mx-auto overflow-visible border-0"
                             style={{ perspective: 1000 }}
                         >
                             <div
-                                className="relative h-full w-full overflow-hidden rounded-3xl card bg-card"
+                                className="relative h-full w-full rounded-3xl card bg-card p-4 sm:p-6 lg:p-12"
                                 style={{ transform, transition: "transform 250ms ease-out", transformStyle: "preserve-3d" }}
                             >
-                                <Image
-                                    src={img}
-                                    alt="Web- und Softwarelösungen von Finn Kötting"
-                                    fill
-                                    priority
-                                    sizes="(max-width: 1024px) 100vw, 420px"
-                                    className="object-cover"
-                                />
+                                <div className="relative h-full w-full rounded-2xl overflow-hidden bg-background flex items-center justify-center">
+                                    <Image
+                                        src={img}
+                                        alt="Web- und Softwarelösungen von Finn Kötting"
+                                        fill
+                                        priority
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
+                                        className="object-contain w-full h-full"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
