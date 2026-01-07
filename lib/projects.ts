@@ -23,16 +23,6 @@ export const PROJECTS: Project[] = [
         link: "https://ticketer.bot/",
     },
     {
-        slug: "tribe-island",
-        title: "Tribe Island",
-        desc: "Gestaltung und technische Umsetzung der Website für das Indie-Spiel Tribe Island – Fokus auf Performance und ansprechendes Design.",
-        tags: ["Webentwicklung", "Indie Game", "Performance"],
-        year: `2026`,
-        stack: ["Next.js"],
-        highlights: ["Ansprechendes Design", "Performance-optimiert", "Spielpräsentation"],
-        link: "",
-    },
-    {
         slug: "wouldyou",
         title: "Would You",
         desc: "Entwicklung des interaktiven \"Higher-Lower\"-Spiels für den Discord-Bot WouldYouBot – mit Fokus auf Performance und Nutzererlebnis.",
@@ -41,6 +31,16 @@ export const PROJECTS: Project[] = [
         stack: ["Next.js", "Tailwind", "Figma", "Node.js", "TypeScript", "MongoDB"],
         highlights: ["Interaktives Spiel", "Performance-optimiert", "Hohe Nutzerzahlen"],
         link: "https://wouldyoubot.gg/",
+    },
+    {
+        slug: "tribe-island",
+        title: "Tribe Island",
+        desc: "Gestaltung und technische Umsetzung der Website für das Indie-Spiel Tribe Island – Fokus auf Performance und ansprechendes Design.",
+        tags: ["Webentwicklung", "Indie Game", "Performance"],
+        year: `2026`,
+        stack: ["Next.js"],
+        highlights: ["Ansprechendes Design", "Performance-optimiert", "Spielpräsentation"],
+        link: "",
     },
     {
         slug: "casa-raschke",

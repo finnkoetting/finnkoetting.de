@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
@@ -25,6 +26,7 @@ const NAV = [
 export default function Navbar() {
     const pathname = usePathname();
     const scrolled = useScroll(10);
+    const [sheetOpen, setSheetOpen] = useState(false);
 
     return (
         <header
@@ -50,17 +52,18 @@ export default function Navbar() {
                         const active =
                             item.href === "/"
                                 ? pathname === "/"
-                                : pathname.startsWith(item.href);
+                                : pathname?.startsWith(item.href) ?? false;
 
                         return (
                             <Link
                                 key={item.href}
                                 href={item.href}
+                                aria-current={active ? "page" : undefined}
                                 className={[
-                                    "rounded-xl border px-3 py-2 text-sm font-medium transition",
+                                    "rounded-xl px-3 py-2 text-sm font-medium transition",
                                     active
-                                        ? "border-border bg-background text-foreground"
-                                        : "border-transparent text-muted-foreground hover:border-border hover:text-foreground",
+                                        ? "bg-background text-foreground font-semibold"
+                                        : "text-muted-foreground hover:text-foreground hover:font-semibold",
                                 ].join(" ")}
                             >
                                 {item.label}
@@ -76,7 +79,7 @@ export default function Navbar() {
                     </Button>
 
                     {/* Mobile Menu */}
-                    <Sheet>
+                    <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
                         <SheetTrigger asChild>
                             <Button
                                 variant="outline"
@@ -88,27 +91,29 @@ export default function Navbar() {
                             </Button>
                         </SheetTrigger>
 
-                        <SheetContent side="right">
+                        <SheetContent side="right" className="p-6 sm:p-4">
                             <SheetHeader>
                                 <SheetTitle>Menü</SheetTitle>
                             </SheetHeader>
 
-                            <div className="mt-6 flex flex-col gap-1">
+                            <div className="mt-6 flex flex-col gap-3">
                                 {NAV.map((item) => {
                                     const active =
                                         item.href === "/"
                                             ? pathname === "/"
-                                            : pathname.startsWith(item.href);
+                                            : pathname?.startsWith(item.href) ?? false;
 
                                     return (
                                         <Link
                                             key={item.href}
                                             href={item.href}
+                                            aria-current={active ? "page" : undefined}
+                                            onClick={() => setSheetOpen(false)}
                                             className={[
-                                                "rounded-xl border px-3 py-3 text-sm font-medium transition",
+                                                "rounded-xl px-4 py-3 text-base font-medium transition",
                                                 active
-                                                    ? "border-border bg-background text-foreground"
-                                                    : "border-transparent text-muted-foreground hover:border-border hover:text-foreground",
+                                                    ? "bg-background text-foreground font-semibold"
+                                                    : "text-muted-foreground hover:text-foreground hover:font-semibold",
                                             ].join(" ")}
                                         >
                                             {item.label}
@@ -116,8 +121,8 @@ export default function Navbar() {
                                     );
                                 })}
 
-                                <Button asChild className="mt-4 rounded-xl">
-                                    <Link href="/contact">Anfrage senden</Link>
+                                <Button asChild className="mt-4 rounded-xl w-full">
+                                    <Link href="/contact" onClick={() => setSheetOpen(false)}>Anfrage senden</Link>
                                 </Button>
                             </div>
                         </SheetContent>

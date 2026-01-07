@@ -29,7 +29,7 @@ export default function ContactPage() {
         <div className="absolute -left-1/4 bottom-0 h-125 w-125 rounded-full bg-accent/3 blur-3xl" />
       </div>
 
-      <section className="mx-auto w-full max-w-screen-2xl px-0 py-32 lg:py-20">
+      <section className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Termin buchen</h1>
 
@@ -40,7 +40,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-screen-2xl px-0 pb-16">
+      <section className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 pb-16">
         <div className="mx-auto w-full max-w-screen-2xl">
           <div className="rounded-3xl border bg-background px-4 py-12 shadow-[0_12px_40px_rgba(0,0,0,0.04)] sm:px-8 sm:py-16">
             <div className="mt-8 h-150 w-full">

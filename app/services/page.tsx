@@ -79,7 +79,7 @@ export default function ServicesPage() {
                 <div className="absolute -left-1/4 bottom-0 h-125 w-125 rounded-full bg-accent/3 blur-3xl" />
             </div>
 
-            <div className="mx-auto w-full max-w-screen-2xl px-0 py-32 lg:py-20">
+            <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-20">
                 {/* Header */}
                 <div className="mx-auto max-w-3xl text-center">
                     <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
@@ -92,11 +92,11 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Services Grid */}
-                <div className="mt-16 grid gap-8 lg:grid-cols-3">
+                <div className="mt-10 sm:mt-16 grid gap-4 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {SERVICES.map(({ title, desc, points, Icon }) => (
                         <article
                             key={title}
-                            className="group relative flex flex-col rounded-3xl border border-gray-200 bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20"
+                            className="group relative flex flex-col rounded-3xl card bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20"
                         >
                             <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                                 <Icon className="h-7 w-7" />
@@ -122,14 +122,14 @@ export default function ServicesPage() {
             <div className="mx-auto max-w-6xl px-4 sm:px-8 h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
             <section id="process" className="relative">
-                <div className="mx-auto w-full max-w-screen-2xl px-0 py-20 mt-10">
+                <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 mt-10">
                     <div className="mx-auto max-w-3xl text-center">
                         <h2 className="text-3xl font-semibold">So läuft&apos;s ab</h2>
                         <p className="mt-2 text-muted-foreground">Ein klarer Ablauf: transparent, planbar und zuverlässig — so führe ich Projekte von der Idee zum Livegang.</p>
                     </div>
 
                     <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
-                        <div className="flex flex-col items-start gap-4 rounded-2xl border bg-card p-6">
+                        <div className="flex flex-col items-start gap-4 rounded-2xl card bg-card p-6">
                             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                                 <Calendar className="h-5 w-5" />
                             </div>
@@ -137,7 +137,7 @@ export default function ServicesPage() {
                             <p className="text-sm text-muted-foreground">Kurzes Kennenlernen: Ziele, Umfang und Erwartungen klären.</p>
                         </div>
 
-                        <div className="flex flex-col items-start gap-4 rounded-2xl border bg-card p-6">
+                        <div className="flex flex-col items-start gap-4 rounded-2xl card bg-card p-6">
                             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                                 <FileText className="h-5 w-5" />
                             </div>
@@ -145,7 +145,7 @@ export default function ServicesPage() {
                             <p className="text-sm text-muted-foreground">Konkretes Konzept, Zeitplan und transparentes Angebot.</p>
                         </div>
 
-                        <div className="flex flex-col items-start gap-4 rounded-2xl border bg-card p-6">
+                        <div className="flex flex-col items-start gap-4 rounded-2xl card bg-card p-6">
                             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                                 <Code2 className="h-5 w-5" />
                             </div>
@@ -153,7 +153,7 @@ export default function ServicesPage() {
                             <p className="text-sm text-muted-foreground">Entwicklung, Tests und regelmäßige Reviews — transparent und iterativ.</p>
                         </div>
 
-                        <div className="flex flex-col items-start gap-4 rounded-2xl border bg-card p-6">
+                        <div className="flex flex-col items-start gap-4 rounded-2xl card bg-card p-6">
                             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                                 <Shield className="h-5 w-5" />
                             </div>
@@ -168,7 +168,7 @@ export default function ServicesPage() {
             <div className="mx-auto max-w-6xl px-4 sm:px-8 h-px bg-linear-to-r from-transparent via-border to-transparent mt-20" />
 
             {/* CTA */}
-            <div className="mt-30 mb-30 flex flex-col items-center gap-6 text-center">
+            <div className="mt-16 sm:mt-24 lg:mt-30 mb-16 sm:mb-24 lg:mb-30 px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-6 text-center">
                 <h2 className="text-2xl font-semibold">Projekt besprechen?</h2>
                 <p className="max-w-lg text-muted-foreground">
                     Kurze Anfrage reicht. Ich melde mich mit einem Vorschlag für die nächsten Schritte.

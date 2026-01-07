@@ -130,3 +130,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .card {
+    @apply border border-border shadow-sm;
+  }
+}

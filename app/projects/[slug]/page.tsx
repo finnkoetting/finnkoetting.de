@@ -32,7 +32,7 @@ export default async function ProjectDetail({
             </div>
 
             {/* Header */}
-            <section className="mx-auto w-full max-w-screen-2xl px-0 pt-32 pb-12">
+            <section className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 pb-12">
                 <div className="mx-auto w-full max-w-screen-2xl">
                     <Link
                         href="/projects"
@@ -95,11 +95,11 @@ export default async function ProjectDetail({
             <div className="mx-auto max-w-6xl px-4 sm:px-8 h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
             {/* Content Cards */}
-            <section className="mx-auto w-full max-w-screen-2xl px-0 py-16">
+            <section className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-16">
                 <div className="mx-auto w-full max-w-screen-2xl grid gap-8 lg:grid-cols-2">
                     {/* Stack Card */}
                     {p.stack?.length ? (
-                        <div className="rounded-3xl border border-gray-200 bg-card p-8 shadow-sm">
+                        <div className="rounded-3xl card bg-card p-8">
                             <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
                             <div className="flex items-center gap-3 mb-6">
@@ -124,7 +124,7 @@ export default async function ProjectDetail({
 
                     {/* Highlights Card */}
                     {p.highlights?.length ? (
-                        <div className="rounded-3xl border border-gray-200 bg-card p-8 shadow-sm">
+                        <div className="rounded-3xl card bg-card p-8">
                             <div className="flex items-center gap-3 mb-6">
                                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
                                     <CheckCircle2 className="h-5 w-5" />
@@ -146,7 +146,7 @@ export default async function ProjectDetail({
             </section>
 
             {/* Project Navigation */}
-            <section className="mx-auto w-full max-w-screen-2xl px-0 pb-20">
+            <section className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 pb-20">
                 <div className="mx-auto w-full max-w-screen-2xl">
                     <div className="mx-auto max-w-6xl px-4 sm:px-8 h-px bg-linear-to-r from-transparent via-border to-transparent mb-8" />
 
@@ -185,9 +185,9 @@ export default async function ProjectDetail({
             </section>
 
             {/* CTA Section */}
-            <section className="relative mx-auto w-full max-w-screen-2xl px-0 pb-40">
+            <section className="relative mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 pb-20 sm:pb-32 lg:pb-40">
                 <div className="mx-auto w-full max-w-screen-2xl">
-                    <div className="relative rounded-3xl border border-gray-200 bg-card p-10 sm:p-14 shadow-lg text-center overflow-hidden">
+                    <div className="relative rounded-3xl card bg-card p-10 sm:p-14 text-center overflow-hidden">
 
                         <h2 className="text-2xl font-semibold sm:text-3xl">Gefällt dir was du siehst?</h2>
                         <p className="mt-4 text-muted-foreground max-w-lg mx-auto">

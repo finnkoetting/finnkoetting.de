@@ -28,7 +28,7 @@ export default function Hero({ imageSrc }: { imageSrc?: string | StaticImageData
     }
 
     return (
-        <section className="relative min-h-screen flex items-center">
+        <section className="relative min-h-screen flex items-start pt-12 sm:pt-16 lg:pt-30">
             {/* Subtle background gradient */}
             <div
                 aria-hidden
@@ -38,8 +38,8 @@ export default function Hero({ imageSrc }: { imageSrc?: string | StaticImageData
                 <div className="absolute -left-1/4 bottom-0 h-32 w-32 sm:h-72 sm:w-72 lg:h-80 lg:w-80 rounded-full bg-accent/3 blur-3xl" />
             </div>
 
-            <div className="mx-auto w-full max-w-screen-2xl px-0 py-12 sm:py-16 lg:py-24 mb-20">
-                <div className="grid gap-20 lg:grid-cols-2 lg:items-center">
+            <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 mb-20">
+                <div className="grid gap-10 lg:gap-20 lg:grid-cols-2 lg:items-center">
                     {/* Text Column */}
                     <div className="space-y-5">
                         <div className="inline-flex items-center gap-2 rounded-full border border-green-400/10 bg-green-400/5 px-4 py-2 text-sm font-medium text-green-400">
@@ -73,11 +73,11 @@ export default function Hero({ imageSrc }: { imageSrc?: string | StaticImageData
                             ref={ref}
                             onMouseMove={handleMove}
                             onMouseLeave={handleLeave}
-                            className="relative w-full h-64 sm:h-80 lg:h-[490px] mx-auto overflow-visible border-0"
+                            className="relative w-full h-64 sm:h-80 lg:h-122.5 mx-auto overflow-visible border-0"
                             style={{ perspective: 1000 }}
                         >
                             <div
-                                className="relative h-full w-full overflow-hidden rounded-3xl border-gray-200 border-2 bg-card shadow-2xl shadow-primary/5"
+                                className="relative h-full w-full overflow-hidden rounded-3xl card bg-card"
                                 style={{ transform, transition: "transform 250ms ease-out", transformStyle: "preserve-3d" }}
                             >
                                 <Image
@@ -95,7 +95,7 @@ export default function Hero({ imageSrc }: { imageSrc?: string | StaticImageData
             </div>
 
             {/* Scroll indicator */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:block">
+            <div className="absolute bottom-22 left-1/2 -translate-x-1/2 hidden lg:block">
                 <div className="flex flex-col items-center gap-2 text-muted-foreground">
                     <span className="text-xs uppercase tracking-widest">Scroll</span>
                     <ChevronDown className="h-5 w-5 animate-bounce" />

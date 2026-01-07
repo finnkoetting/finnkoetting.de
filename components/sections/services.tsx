@@ -29,7 +29,7 @@ export default function Services() {
             {/* Subtle divider */}
             <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
-            <div className="mx-auto max-w-screen-2xl px-0 py-40">
+            <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-40">
                 {/* Section Header */}
                 <div className="mx-auto max-w-3xl text-center">
                     <p className="text-sm font-medium uppercase tracking-widest text-primary">
@@ -44,11 +44,11 @@ export default function Services() {
                 </div>
 
                 {/* Services Grid */}
-                <div className="mt-14 grid gap-6 lg:grid-cols-3">
+                <div className="mt-10 sm:mt-14 grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {SERVICES.map(({ title, desc, Icon, features }) => (
                         <div
                             key={title}
-                            className="group relative flex flex-col rounded-3xl border bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                            className="group relative flex flex-col rounded-3xl card bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
                         >
                             {/* Icon */}
                             <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
@@ -77,9 +77,9 @@ export default function Services() {
 
                     <div
                         key={"contact"}
-                        className="group relative flex flex-col rounded-3xl border bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl lg:col-span-3"
+                        className="group relative flex flex-col rounded-3xl card bg-card p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl md:col-span-2 lg:col-span-3"
                     >
-                        <div className="flex flex-row gap-8 items-center">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start sm:items-center">
                             {/* Icon */}
                             <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                                 <MailIcon className="h-7 w-7" />

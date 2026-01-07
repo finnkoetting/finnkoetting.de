@@ -8,7 +8,7 @@ export default function ContactCta() {
             {/* Subtle divider */}
             <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
-            <div className="mx-auto max-w-screen-2xl px-0 py-55">
+            <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-20 sm:py-32 lg:py-55">
                 <div className="mx-auto max-w-4xl">
                     {/* Header */}
                     <div className="text-center">
@@ -31,7 +31,7 @@ export default function ContactCta() {
                     <div className="mt-12 grid gap-6 sm:grid-cols-2">
                         <a
                             href="mailto:kontakt@finnkoetting.de"
-                            className="group flex items-center gap-5 rounded-2xl border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                            className="group flex items-center gap-5 rounded-2xl card bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                         >
                             <div className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                                 <Mail className="h-6 w-6" />
@@ -44,7 +44,7 @@ export default function ContactCta() {
 
                         <a
                             href="tel:+4916098536691"
-                            className="group flex items-center gap-5 rounded-2xl border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                            className="group flex items-center gap-5 rounded-2xl card bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                         >
                             <div className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                                 <Phone className="h-6 w-6" />

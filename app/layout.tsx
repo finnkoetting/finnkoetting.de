@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     default: "Finn Kötting – Web- & Softwarelösungen",
     template: "%s | Finn Kötting",
   },
+  icons: {
+    icon: "/brand.svg",
+  },
   description:
     "Web- und Softwarelösungen für Ihr Unternehmen. Schnell online, sicher gehostet, skalierbar. Moderne Webentwicklung, Server-Systeme und individuelle Software.",
   keywords: [

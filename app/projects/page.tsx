@@ -15,26 +15,25 @@ export default function ProjectsPage() {
                 <div className="absolute -left-1/4 bottom-0 h-125 w-125 rounded-full bg-accent/3 blur-3xl" />
             </div>
 
-            {/* Hero/Header */}
-            <section className="mx-auto w-full max-w-screen-2xl px-0 py-32 lg:py-20">
-                <div className="mx-auto max-w-3xl text-center">
-                    <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">Meine Projekte</h1>
-
-                    <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                        Ausgewählte Arbeiten aus Webentwicklung, Bot-Entwicklung und Automatisierung —
-                        mit Fokus auf Struktur, Performance und Wartbarkeit.
-                    </p>
-                </div>
-            </section>
+            {/* Header */}
+            <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8 text-center py-13">
+                <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                    Meine Projekte
+                </h1>
+                <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                    Ausgewählte Arbeiten aus Webentwicklung, Bot-Entwicklung und Automatisierung —
+                    mit Fokus auf Struktur, Performance und Wartbarkeit.
+                </p>
+            </div>
 
             {/* Featured Project */}
-            <section className="mx-auto w-full max-w-screen-2xl px-0 pb-20">
+            <section className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 pb-20">
                 <div className="mx-auto w-full max-w-screen-2xl">
                     <h2 className="text-sm font-medium uppercase tracking-widest text-primary mb-6">Aktuelles Projekt</h2>
 
                     <Link
                         href={`/projects/${featuredProject.slug}`}
-                        className="group relative block rounded-3xl border border-gray-200 bg-card p-8 sm:p-10 shadow-lg transition-all duration-300 hover:shadow-xl hover:border-primary/20"
+                        className="group relative block rounded-3xl card bg-card p-8 sm:p-10 transition-all duration-300 hover:shadow-xl hover:border-primary/20"
                     >
                         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
                             <div>
@@ -103,10 +102,10 @@ export default function ProjectsPage() {
             </section>
 
             {/* Divider */}
-                <div className="mx-auto w-full max-w-screen-2xl h-px bg-linear-to-r from-transparent via-border to-transparent" />
+            <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
             {/* Other Projects Grid */}
-            <section className="mx-auto w-full max-w-screen-2xl px-0 py-32 lg:py-20">
+            <section className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-20">
                 <div className="mx-auto w-full max-w-screen-2xl">
                     <h2 className="text-sm font-medium uppercase tracking-widest text-primary mb-8">Weitere Projekte</h2>
 
@@ -115,7 +114,7 @@ export default function ProjectsPage() {
                             <Link
                                 key={p.slug}
                                 href={`/projects/${p.slug}`}
-                                className="group relative flex flex-col rounded-2xl border border-gray-200 bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20"
+                                className="group relative flex flex-col rounded-2xl card bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20"
                             >
                                 <div className="flex items-start justify-between gap-3 mb-4">
                                     <span className="inline-flex items-center gap-1 rounded-full bg-muted/60 px-2 py-1 text-xs text-muted-foreground">
@@ -150,7 +149,7 @@ export default function ProjectsPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="relative mx-auto w-full max-w-screen-2xl px-0 pb-40">
+            <section className="relative mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 pb-20 sm:pb-32 lg:pb-40">
                 <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
                 <div className="mx-auto max-w-3xl pt-20 text-center">

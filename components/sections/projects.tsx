@@ -10,7 +10,7 @@ export default function Projects() {
             {/* Subtle divider */}
             <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
-            <div className="mx-auto max-w-screen-2xl px-0 py-55">
+            <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-20 sm:py-32 lg:py-55">
                 {/* Section Header */}
                 <div className="mx-auto max-w-3xl text-center">
                     <p className="text-sm font-medium uppercase tracking-widest text-primary">
@@ -25,11 +25,11 @@ export default function Projects() {
                 </div>
 
                 {/* Projects Grid */}
-                <div className="mt-14 grid gap-6 lg:grid-cols-3">
+                <div className="mt-10 sm:mt-14 grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {PROJECTS.slice(0, 2).map((p) => (
                         <div
                             key={p.title}
-                            className="group relative flex flex-col rounded-3xl border bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                            className="group relative flex flex-col rounded-3xl card bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
                         >
                             {/* Accent bar */}
                             <div className="absolute left-0 top-0 h-full w-1 rounded-l-3xl from-primary via-primary/60 to-accent/50" />
