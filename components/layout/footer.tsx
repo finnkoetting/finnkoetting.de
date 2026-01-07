@@ -17,7 +17,7 @@ const LEGAL = [
 export default function Footer() {
     return (
         <footer className="border-t">
-            <div className="mx-auto max-w-6xl px-4 py-12 sm:px-8 sm:py-16">
+            <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
                 <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
                     {/* Brand */}
                     <div className="lg:col-span-2">
@@ -36,6 +36,23 @@ export default function Footer() {
                         <p className="text-sm font-medium">Navigation</p>
                         <ul className="mt-4 space-y-2">
                             {LINKS.map((link) => (
+                                <li key={link.href}>
+                                    <Link
+                                        href={link.href}
+                                        className="text-sm text-muted-foreground transition hover:text-foreground"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Legal */}
+                    <div>
+                        <p className="text-sm font-medium">Rechtliches</p>
+                        <ul className="mt-4 space-y-2">
+                            {LEGAL.map((link) => (
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}

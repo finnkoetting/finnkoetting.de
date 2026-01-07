@@ -70,6 +70,7 @@ export default function AboutPage() {
                                     src="/portrait.jpeg"
                                     alt="Finn Kötting"
                                     fill
+                                    sizes="192px"
                                     className="object-cover"
                                     priority
                                 />
@@ -154,7 +155,7 @@ export default function AboutPage() {
 
                     <div className="space-y-6">
                         {WORK.map((w) => (
-                            <div className="rounded-2xl card bg-card p-6">
+                            <div key={w.title} className="rounded-2xl card bg-card p-6">
                                 <h3 className="font-medium">{w.title} ({w.period})</h3>
                                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                                     {w.description}

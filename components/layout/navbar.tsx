@@ -13,6 +13,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
+import { SheetDescription } from "@/components/ui/sheet";
 import Logo from "@/components/shared/logo";
 import { useScroll } from "@/lib/use-scroll";
 
@@ -94,6 +95,7 @@ export default function Navbar() {
                         <SheetContent side="right" className="p-6 sm:p-4">
                             <SheetHeader>
                                 <SheetTitle>Menü</SheetTitle>
+                                <SheetDescription className="sr-only">Hauptnavigation</SheetDescription>
                             </SheetHeader>
 
                             <div className="mt-6 flex flex-col gap-3">

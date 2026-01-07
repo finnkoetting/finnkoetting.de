@@ -27,7 +27,7 @@ export default function About() {
                     {/* Profile (left) */}
                     <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 text-center sm:text-left">
                         <div className="relative h-32 w-32 overflow-hidden rounded-full ring-1 ring-border">
-                            <Image src="/portrait.jpeg" alt="Finn Kötting" fill className="object-cover" />
+                            <Image src="/portrait.jpeg" alt="Finn Kötting" fill sizes="128px" className="object-cover" />
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold">Finn Kötting</h3>
