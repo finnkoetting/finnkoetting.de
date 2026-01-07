@@ -68,13 +68,14 @@ export default function RootLayout({
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
-
         <script
           dangerouslySetInnerHTML={{
             __html: `console.log('%c Finn Kötting %c Web- & Softwarelösungen ', "background: #000; color: #fff; padding:5px 0;", "background: #2563eb; color: #fff; padding:5px 0;");
 console.log('%c Entwickelt mit Next.js und viel ❤️ ', "background: #000; color: #fff; padding:5px 0;");
 console.log('%c Bitte seien Sie vorsichtig, wenn Sie hier etwas einfügen! Hacker könnten versuchen, Sie zu täuschen. ', "background: #ff0000; color: #fff; padding:5px 0;");
-(function suppressConsoleAfterWarning(){try{var methods=['log','info','warn','error','debug'];methods.forEach(function(m){if(typeof console[m]==='function'){console[m]=function(){}}});}catch(e){} })();`
+(function suppressConsoleAfterWarning(){try{var methods=['log','info','warn','error','debug'];methods.forEach(function(m){if(typeof console[m]==='function'){console[m]=function(){}}});}catch(e){} })();
+// Add a no-op beforeunload listener to opt out of bfcache (addresses Lighthouse warning)
+window.addEventListener('beforeunload', function(){ return null; });`
           }}
         />
       </body>

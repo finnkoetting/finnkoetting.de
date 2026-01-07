@@ -1,7 +1,9 @@
 "use client";
 
-import Cal, { getCalApi } from "@calcom/embed-react";
+import dynamic from "next/dynamic";
 import { useEffect } from "react";
+
+const Cal = dynamic(() => import("@calcom/embed-react").then((mod) => mod.default), { ssr: false, loading: () => <div className="h-full w-full bg-muted/40" /> });
 
 const NS = "contact";
 const LINK = "koetting/contact";
@@ -9,7 +11,8 @@ const LINK = "koetting/contact";
 export default function ContactPage() {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: NS });
+      const mod = await import("@calcom/embed-react");
+      const cal = await mod.getCalApi({ namespace: NS });
       cal("ui", {
         theme: "light",
         cssVarsPerTheme: {
